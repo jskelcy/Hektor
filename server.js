@@ -1,13 +1,20 @@
 var http = require('http');
 var Frame = require('./frameWork1');
 
-var app = new Frame()
+var app = Frame()
 //console.log(app);
+
+app.setPublic('/public');
+app.setPublic('/assets');
 
 app.get('/', function(req, res){
 	res.write('welcome to hector');
 	res.end();
 });
+
+
+
+
 //look a node source
 var server = http.createServer(app.reqListener).listen(8080);
 
