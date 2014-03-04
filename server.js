@@ -5,7 +5,7 @@ var app = new Frame()
 //console.log(app);
 
 app.get('/', function(req, res){
-	res.write('hello');
+	res.write('welcome to hector');
 	res.end();
 });
 //look a node source
